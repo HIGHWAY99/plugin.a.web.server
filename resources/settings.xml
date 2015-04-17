@@ -1,0 +1,17 @@
+<settings>
+	<category label="General">
+		<setting visible="true" id="core-player" type="labelenum" label="Player Core" values="AUTO|DVDPLAYER|MPLAYER|PAPLAYER" default="AUTO" />
+		<setting visible="false" id="debug-enable" 	type="bool" label="Enable Debugging to File" default="false" />
+		<setting visible="false" id="debug-show" 		type="bool" label="Enable Debugging to Notice(s)" default="false" />
+		<setting visible="false" id="auto-view" type="bool"   label="Enable Automatic View" default="false" />
+		<setting visible="false" id="default-view"   type="number" label="Default"               default="50"   enable="!eq(-1,false)" />
+		<setting visible="false" id="movies-view"    type="number" label="Movies"                default="515"  enable="!eq(-2,false)" />
+		<setting visible="false" id="tvshows-view"   type="number" label="TV Shows"              default="515"  enable="!eq(-3,false)" />
+		<setting visible="false" id="season-view"    type="number" label="Seasons"               default="50"   enable="!eq(-4,false)" />
+		<setting visible="false" id="episode-view"   type="number" label="Episodes"              default="515"  enable="!eq(-5,false)" />
+		<setting visible="false" id="links-view"   	 type="number" label="Links"              	 default="50"   enable="!eq(-6,false)" />
+		<setting visible="false" id="anime-view"   	 type="number" label="Anime"              	 default="515"  enable="!eq(-7,false)" />
+		<setting visible="true" id="port" type="number" label="Port number" default="8025" />
+		<setting visible="true" id="address" type="text" label="IP Address" default="" />
+	</category>
+</settings>

@@ -1,0 +1,139 @@
+<html>
+<head>
+
+<style>
+  body {background-color:#333333;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;width:100%;}
+  a.top {display:block;background-color:black;text-decoration:none;color:red;text-color:red;border:3px solid maroon;border-bottom:0px solid maroon;padding:3px 9px 3px 9px;margin:0px 3px 0px 0px;}
+  a.top:hover {display:block;background-color:maroon;text-decoration:underline;color:black;text-color:black;border:3px solid maroon;padding:3px 9px 3px 9px;margin:0px 3px 0px 0px;}
+  hr {background-color:maroon;color:maroon;text-color:maroon;shadow-color:maroon;margin:2px 0px 8px 0px;padding:0px 0px 0px 0px;height:4px;}
+  div.topbar {background-color:black;margin:0px 0px 0px 0px;padding:8px 0px 8px 0px;width:100%;height:62px;}
+  div.topbar2 {background-color:black;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;width:100%;height:15px;border:0px solid maroon;border-bottom:0px solid maroon;}
+  form {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}
+  a.ainbody {text-decoration:none;color:red;text-color:red;border:0px solid black;}
+  a.ainbody:hover {text-decoration:underline;color:white;text-color:white;border:0px solid black;}
+  a.ainbody2 {text-decoration:none;color:red;text-color:red;border:0px solid black;}
+  a.ainbody2:hover {text-decoration:underline;color:white;text-color:white;border:0px solid black;}
+  a.ainbody3 {text-decoration:none;color:orange;text-color:orange;border:0px solid black;}
+  a.ainbody3:hover {text-decoration:underline;color:white;text-color:white;border:0px solid black;}
+  a.ainbody4 {text-decoration:none;color:cyan;text-color:cyan;border:0px solid black;}
+  a.ainbody4:hover {text-decoration:underline;color:white;text-color:white;border:0px solid black;}
+  table.table1 {background-color:black;}
+  table.table1 td.boxed {background-color:black;text-decoration:none;color:#333333;text-color:#333333;border:3px solid maroon;padding:3px 9px 3px 9px;margin:0px 3px 0px 0px;}
+  .cinput {background-color:#333333;color:white;text-color:white;border:1px solid #666666;}
+  textarea.log {background-color:#333333;color:white;text-color:white;border:1px solid #666666;margin:4px 4px 4px 4px;padding:8px 8px 8px 8px;width:90%;height:90%;}
+  ul.topbar {list-style-type:none;margin:0;padding:0;} 
+  ul.topbar li {display:inline;float:left;}
+  ul.topbar2 li {display:inline;float:left;}
+  ul.topbar2 li:hover {color:red;text-color:red;}
+  ul.topbar2 li {color:white;text-color:white;border:0px solid black;padding:0px 19px 0px 0px;margin:0px 3px 0px 0px;}
+  iframe,IFRAME {visibility:hidden;margin:0;padding:0;width:0px;height:0px;}
+  img.ScreenListItem {background-color:black;width:100px;}
+  a.ScreenListItem {text-decoration:none;color:orange;text-color:orange;}
+</style>
+</head>
+<body>
+<div class="topbar">
+
+<table style="background-color:black;padding:0px 0px 0px 0px;" width="100%"><tr style="background-color:black;" width="100%"><td align="left" valign="top" style="background-color:black;">
+<div style="background-color:black;">
+<ul class="topbar">
+  <li>
+    <a class="top" href="/">FRONT</a>
+  </li>
+  <li>
+    <a class="top" href="/test?cmd=screenmove&path=home" TARGET="FrAmB">Home</a>
+  </li>
+  <li>
+    <a class="top" href="/test?cmd=screenaction&path=back" TARGET="FrAmB">BACK</a>
+  </li>
+  <li>
+    <a class="top" href="/test?cmd=stop">STOP</a>
+  </li>
+  <li>
+    <a class="top" href="/test?cmd=pause">PAUSE</a>
+  </li>
+  <li>
+    <a class="top" href="/whats_playing">What's Playing</a>
+  </li>
+  <li>
+    <a class="top" href="/test?cmd=dreamcatcher">Dreamcatcher</a>
+  </li>
+  <li>
+    <a class="top" href="/stopserver">Shutdown Server</a>
+  </li>
+  <li>
+    <a class="top" href="/page?body=1">Index</a>
+  </li>
+  <li>
+</ul>
+<!-- 
+  <li>
+    <a class="top" href="/test?cmd=whatsplaying">What's Playing</a>
+  </li>
+
+<a class="top" href="/">FRONT</a>
+<a class="top" href="/test?cmd=screenmove&path=home" TARGET="FrAmB">Home</a>
+<a class="top" href="/test?cmd=screenaction&path=back" TARGET="FrAmB">BACK</a>
+<a class="top" href="/test?cmd=stop">STOP</a>
+<a class="top" href="/test?cmd=pause">PAUSE</a>
+<a class="top" href="/test?cmd=whatsplaying">What's Playing</a>
+<a class="top" href="/test?cmd=dreamcatcher">Dreamcatcher</a>
+<a class="top" href="/stopserver">Shutdown Server</a>
+<a class="top" href="/page?body=1">Index</a>
+
+<a class="top" href="/test?cmd=webplay">Web Play</a>
+<a class="top" href="http://localhost:45550/status">Axel Status</a>
+<a class="top" href="http://127.0.0.1:45550/status">Axel Status</a>
+[ <a href="/" style="background-color:grey;color:red;text-color:red;"> HOME </a> ] 
+[ <a href="/test?cmd=stop" style="background-color:grey;color:red;text-color:red;"> STOP </a> ] 
+[ <a href="/test?cmd=pause" style="background-color:grey;color:red;text-color:red;"> PAUSE </a> ] 
+[ <a href="/test?cmd=play" style="background-color:grey;color:red;text-color:red;"> TEST PLAY </a> ] 
+[ <a href="%s" style="background-color:grey;color:red;text-color:red;"> %s </a> ] 
+
+
+ -->
+</div>
+</td><td align="center" valign="top" style="background-color:black;" width="auto">
+&nbsp;<IFRAME SRC="about:blank" NAME="FrAmB" WIDTH="0" HEIGHT="0">
+</IFRAME>
+</td><td align="right" valign="top" style="background-color:black;" width="400">
+<form action="/test" method="GET">
+<input type="hidden" name="cmd" value="play">
+<input class="cinput" style="" name="url" type="text" size="30">
+ <select class="cinput" name="resolver" style="" >
+<option selected>Direct</option>
+<option>Resolve</option>
+</select> 
+<input class="cinput" style="" type="submit" value="Play it !"></form>
+</td></tr>
+<tr style="background-color:black;" width="100%"><td align="left" valign="bottom" style="background-color:black;">
+<ul class="topbar2">
+  <li><img src="/img?path=btn2/isplaying%%PLYR.ISPLAYING%%.png" width="30px" height="20px" border="0" align="left" valign="top"></li>
+  <li>&nbsp;</li>
+  <li>&nbsp;%%SYSCURRENTWINDOW%%</li>
+  <li>&nbsp;%%SYSCURRENTCONTROL%%</li>
+  <li>&nbsp;</b>%%SYSSCREENMODE%% (</b>%%SYSSCREENWIDTH%%x%%SYSSCREENHEIGHT%%<b>)</b>[%%SYSFPS%%  FPS]</li>
+</ul>
+</td><td align="center" valign="top" style="background-color:black;" width="auto">
+&nbsp;
+<ul class="topbar2">
+  <li>&nbsp;%%SYSFRIENDLYNAME%%</li>
+</ul>
+</td><td align="right" valign="top" style="background-color:black;" width="auto">
+&nbsp;
+<ul class="topbar2">
+  <li>&nbsp;<b>%%WEATHERTEMP%% (</b>%%WEATHERCONDITIONS%%<b>)</b><img src="/img?path=special://temp/weather/%%WEATHERFANARTCODE%%.png" width="20px" height="20px" border="0" align="right" valign="top"></li>
+  <li>&nbsp;%%SYSLANG%%</li>
+  <li>&nbsp;%%NETWORK.LINKSTATE%%</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<br>
+<hr>
+<div style="margin:20px 5px 20px 5px;">
+<!--SPLIT-->
+</div>
+</body>
+</html>

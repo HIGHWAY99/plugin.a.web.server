@@ -1,0 +1,135 @@
+## help.txt was made at the time of v0.2.3.
+## Some things may have changed since then.
+
+Main menu:
+    Start Server
+        # Attemps to start the server.
+        # If the server is already started, it'll attemp to stop the one currently running, and then start the new one.  This made it easier to test when making changes, so not to have to exit XBMC / Kodi.
+    Stop Server
+        # Attemps to fetch the url "/stopserver" to activate the server's stop feature.  This made things easier, so not to have to either exit or restart XBMC / Kodi.
+
+Add-on Settings:
+    Player Core
+        # ['AUTO','DVDPLAYER','MPLAYER','PAPLAYER']
+    Port number
+        # Default: 8025
+        # Remember to shutdown one, before changing this port if you got one currently running.  As it makes use of this port number when attempting to shutdown the server currently running.
+    IP Address
+        # Should be left blank (ie: ''), for now.
+        # Seems to work over the network.
+        # Seems to not work over the internet.  In my case, this may be a lack of port-forwarding.
+
+http://localhost:8025/
+
+/addoninfo?cmd=...
+*    ['author','description','disclaimer','name','id','stars','summary','type','version']
+
+
+/stopserver
+*    # Attemps to shutdown the web server, currently running.
+/hello
+*    # For Testing.
+*    # Came with a coding example.
+/form
+*    # For Testing.
+*    # Came with a coding example.
+/say?phrase=...
+*    [... text ...]
+*    # For Testing.
+*    # Came with a coding example.
+/list
+*    # For Testing.
+*    # lists a link to the hello page.
+/txt?path=...
+*    ['*.txt','*.log','index.txt','special://logpath/kodi.log']
+*    #
+/lastscreenshot
+*    # Attemps to displays, as an image, your last screenshot taken.
+*    # You'll probably need to F5 or Control+F5 to refresh this image due to your browser cache.
+/img?path=...
+*    ['favicon.ico','*.ico','*.png','*.jpg','*.gif']
+*    #
+/page?body=...&path=...
+*  body=
+*    {'0':'use this file only.','1':'use default body around file.'}
+*    # checks for '1' at this time, anything else acts as '0' at this time.
+*  path=
+*    ['*.html','*.htm','*.txt','special://logpath/*.log']
+*    #
+/test?cmd=
+*  cmd=
+*    ['','screenaction','screenmove','special://logpath/*.log']
+*    #blank (ie: '') defaults to index.html in addon folder.
+*      screenaction
+*        path=
+*          # ['back',...]
+*          # 
+*      screenmove
+*        path=
+*          # ['Home','Weather',...]
+*          # 
+*      stopscript
+*        path=
+*          # ['plugin.video.example',...]
+*          # 
+*      note
+*        path=
+*          # A text message.
+*      popupok
+*        path=
+*          # A text message.
+*      runaddon
+*        path=
+*          # ['plugin.video.example',...]
+*          # 
+*      runplugin
+*        path=
+*          # ['plugin.video.example',...]
+*          # 
+*      showaddonsettings
+*        # This open's and the current addon's Add-on Settings.
+*      dreamcatcher
+*        # This runs Dreamcatcher's download method.
+*      whatsplaying
+*        # Show's what's currently playing in XBMC / Kodi.
+*      webplay
+*        path=
+*        # This attempts to play what's currenting playing in XBMC / Kodi via a flash player.
+*        # This is currently not finished.
+*      stop
+*        # 
+*      pause
+*        # 
+*      play
+*        # can make use of either the "url" or "path" variable.
+*        url=
+*          # 
+*        path=
+*          # 
+*        resolver=
+*          ['resolve','direct']
+*          # Anything other than 'resolve' at the moment defaults to 'direct' for now.
+
+/m
+*    # Mobile version - index page. (mobile.html)
+  /m_dreamcatcher
+  *    # For Mobile Version.  Launches dreamcatcher's download feature.
+  /m_playing
+  *    # For Mobile Version.  Shows what's playing
+  /m_stopserver
+  *    # For Mobile Version.  Attempts to close the port for this web server.
+
+/txt?path=...
+/webplay?path=...&url=...
+*    # 
+*  path=
+*    # page to use for watching the video.  This makes it possible to use different types of players, so to use whatever one is needed for a given video.
+*  url=
+*    # url to video.
+/whats_playing
+
+/dir
+/current_list
+
+
+

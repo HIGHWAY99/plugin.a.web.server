@@ -1,0 +1,44 @@
+<script type='text/javascript' src='/page?path=webplayer_flv4_swfobject.js'></script>
+<div id='container'>This text will be replaced</div>
+<script type='text/javascript'>
+  var so = new SWFObject('/page?path=webplayer_flv4_mediaplayer.swf','jstest','640','360','8');
+  so.addParam('allowscriptaccess','always');
+  so.addParam('allowfullscreen','true');
+  so.addVariable('width','640');
+  so.addVariable('height','360');
+  so.addVariable('file','%%FILE%%');
+//  so.addVariable('image','img/image14.jpg');
+  so.addVariable('javascriptid','jstest');
+  so.addVariable('id','test.flv');
+  so.addVariable('enablejs','true');
+  so.addVariable('showicons','false');
+//  so.addVariable('logo','img/image4.png');
+  so.addVariable('shownavigation','true');
+  so.addVariable('showstop','true');
+  so.addVariable('showdigits','true');
+  so.addVariable('showdownload','true');
+//  so.addVariable('usefullscreen','true');
+//  so.addVariable('autostart','true');
+//  so.addVariable('autostart','false');
+  so.addVariable('autostart','true');
+//  so.addVariable('overstretch','false');
+//  so.addVariable('overstretch','true');
+  so.addVariable('transition','fade');
+  //# transition (random): Only for the rotator. Sets the transition to use between images. The default, random, randomly pick a transition. To restrict to a certain transition, use these values: fade, bgfade, blocks, bubbles, circles, flash, fluids, lines or slowfade
+  so.addVariable('screencolor','0x000000');
+  //# screencolor (0x000000): Color of the display area, in HEX format. With the rotator, change this to your HTML page's color make images of different sizes blend nicely.
+  so.addVariable('lightcolor','0xFFFFFF');
+  //# lightcolor (0x000000): Rollover color of the controls, in HEX format.
+  so.addVariable('frontcolor','0xFFFFFF');
+  //# frontcolor (0x000000): Texts & buttons color of the controls, in HEX format.
+  so.addVariable('backcolor','0x000000');
+  //# backcolor (0xFFFFFF): Backgroundcolor of the controls, in HEX format.
+  so.addVariable('type','flv');
+//  so.addVariable('type','rtmp');
+  so.addVariable('link','');
+//  so.addVariable('linktarget','_download');
+  //# type (mp3,flv,rtmp,jpg,png,gif,swf): Only for the mediaplayer, which determines the type of file to play based upon the last three characters of the file flashvar. This doesn't work with database id's or mod_rewrite, so you can set this flashvar to the correct filetype. If not sure, the player assumes a playlist is loaded.
+
+
+  so.write('container');
+</script>
